@@ -4,7 +4,7 @@ import { useRef } from "react";
 import ProductTarget from "../ProductTarget/ProductTarget";
 
 
-function Modal(parcelas) {
+function Modal(parcelas, {content}) {
 
     const modalButton = useRef();
     const modal = useRef();
@@ -39,15 +39,22 @@ function Modal(parcelas) {
                     </div>
             
 
-
                     <div className={style.allParcelasContainer}>
-                        <div className={style.parcelasContainer}>
-                            <ProductTarget widhtContainer={90} parcela={parcela1} />
-                        </div>
-                        <div className={style.parcelasContainer}>
-                            <ProductTarget widhtContainer={90} parcela={parcelas.parcelas[1]} />
-                        </div>
+                        {parcelas.parcelas.map((parcela, index) => (
+                            <div className={style.parcelasContainer}>
+                                <ProductTarget widhtContainer={90} parcela={parcela} content={content}/>
+                            </div>
+                        ))}
                     </div>
+
+                    {/* <div className={style.allParcelasContainer}>
+                        <div className={style.parcelasContainer}>
+                            <ProductTarget widhtContainer={90} parcela={parcela1} content={content}/>
+                        </div>
+                        <div className={style.parcelasContainer}>
+                            <ProductTarget widhtContainer={90} parcela={parcelas.parcelas[1]} content={content}/>
+                        </div>
+                    </div> */}
                 
                 
                 

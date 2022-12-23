@@ -73,7 +73,7 @@ function SidebarScreen({isOpen, content, parcelaId,contract1,address1}) {
     if(content=='/client'){
         return(
             <div className={`${isOpen && style.sidebarScreenContainerMax} ${style.sidebarScreenContainer}`}>
-                <Modal parcelas= {totalTokens} content ={content}/>
+                <Modal parcelas = {totalTokens} content={content} />
                 <h1>DASHBOARD</h1>
                 <div className={style.flexRowContainer}>
                     <Dashboard />
@@ -91,6 +91,8 @@ function SidebarScreen({isOpen, content, parcelaId,contract1,address1}) {
     }else if(content=='/company'){
         return(
             <div className={`${isOpen && style.sidebarScreenContainerMax} ${style.sidebarScreenContainer}`}>
+                <Modal parcelas={totalTokens} content={content}/>
+
                 <div className={style.flexRowContainerCompany}>
                     <div>
                         <h1>DASHBOARD</h1>
