@@ -1,0 +1,95 @@
+.blackBackCover{
+    height: 108.5vH;
+    width: 99.5vW;
+    background-color: rgba(0, 0, 0, 0.728);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -5%;
+    margin-left: -7%;
+    z-index: 5;overflow-y: hidden;
+}
+
+.hidde{
+    display: none;
+}
+
+.popup{
+    height: 700px;
+    width: 700px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.verMasButton{
+    position: absolute;
+    bottom: 0%;
+    right: 2.5%;
+}
+
+.verMasButton:hover{
+    color: rgb(0, 36, 50);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.closeButton{
+    font-family: 'Courier New', Courier, monospace;
+    color: red;
+    padding: 2%;
+    text-align: right;
+    cursor: pointer;
+    position: absolute;
+    right: 27%;
+}
+
+.allParcelasContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* align-items: flex-end; */
+    align-content: center;
+    height: 81%;
+    /* padding-top: 10%; */
+    padding-bottom: 10%;
+    overflow: scroll;
+}
+
+.parcelasContainer{
+    padding: 2%;
+}
+
+.filterButton{
+    padding: 0.3%;
+    border-radius: 5px;
+    text-align: right;
+    cursor: pointer;
+    right: 27%;
+    border: 1px solid #000060;
+    color: #000060;
+    width: 20%;
+    height: 20px;
+    font-size: 11px;
+    margin-right: 3%;
+    text-align: left;
+    transition: 0.6;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.filterButton:hover{
+    background-color: #000060;
+    color: white;
+}
+
+.filterButtonSelected{
+    background-color: aquamarine;
+}
+
+.flexRow{
+    display: flex;
+    padding: 2%;
+    width: 100%;
+}

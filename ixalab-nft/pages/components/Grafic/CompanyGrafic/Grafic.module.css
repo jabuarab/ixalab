@@ -1,0 +1,77 @@
+.flexRowContainerCompany{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    column-gap: 5px;
+    width: 100%;
+}
+
+.flexRowContainerScale{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    /* justify-content: space-between; */
+    -moz-column-gap: 5px;
+    column-gap: 10px;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.graficContainer{
+    width: 80%;
+    height: 350px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    align-content: start;}
+
+.graficContainerRow{
+    width: 97%;
+    display: flex;
+    justify-content: right;
+    align-content: start;
+}
+
+.graficContainerRowCenter{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    align-content: start;
+}
+
+.sacleContainer{
+    width: 15%;
+    height: 350px;
+
+}
+
+.w100{
+    width: 100%;
+}
+
+.redSq{
+    height: 30px;
+    width: 30px;
+    background-color: red;
+}
+
+.orangeSq{
+    height: 30px;
+    width: 30px;
+    background-color: orange;
+}
+
+.yellowSq{
+    height: 30px;
+    width: 30px;
+    background-color: yellow;
+}
+
+.greenSq{
+    height: 30px;
+    width: 30px;
+    background-color: green;
+}

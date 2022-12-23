@@ -1,0 +1,52 @@
+.table{
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: right;
+    width: 30%;
+    padding-top: 4%;
+}
+
+.tableRow{
+    width: 100%;
+    background: white;
+    margin-top: 2%;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2%;
+    height: 30px;
+    transition: 0.5s;
+    border-radius: 5px;
+}
+
+.tableRow:hover{
+    width: 105%;
+    background: rgb(242 242 242);
+    box-shadow: 8px 5px 15px;
+    border-radius: 5px;
+}
+
+.tableSelected{
+    background-color: #00acff40!important;
+}
+
+.hidden{
+    display: none;
+}
+
+.flexRowContainer{
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+    column-gap: 5px;
+    margin-top: -5%;
+}
+
+.grarficUp{
+    position: absolute;
+    top: 8%;
+    right: 2%;
+   
+}

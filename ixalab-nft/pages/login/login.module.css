@@ -1,0 +1,79 @@
+.loginContainer{
+    width: 500px;
+    height: 500px;
+    box-shadow: 2px 2px 64px 2px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 5s;
+    rotate: 0deg;
+}
+
+.loginBack{
+    height: 97vH;
+    width: 99vW;
+    margin: 0px;
+    background-color: white;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+.input{
+    width: 80%;
+    height: 5%;
+    border-radius: 5px;
+    margin-bottom: 5%;
+
+}
+
+.inputLabel{
+    width: 100%;
+    margin-left: 20%;
+}
+
+.buttonLogin{
+    width: 50%;
+    height: 10%;
+    border-radius: 5px;
+    border: solid 1px white;
+    background: #12121e;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.buttonLogin:hover{
+    background: white;
+    color: #12121e;
+    border: solid 1px #12121e;
+    transition: 0.5s;
+}
+
+.alink{
+    margin-top: 2%;
+    color: #12121e;
+}
+
+.alink:hover{
+    margin-top: 2%;
+    color: rgb(47, 179, 255);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.loginTitle{
+    color: #12121e;
+}
+
+.buttonLoginDos:hover{
+    color: #12121e;
+}
+
+.buttonLoginDos{
+    color: white;
+}

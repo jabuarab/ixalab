@@ -1,0 +1,7 @@
+.grafic{
+    max-height: 470px;
+    max-width: 900px;
+    height: 470px!important;
+    width: 900px!important;
+    position: relative;
+}
