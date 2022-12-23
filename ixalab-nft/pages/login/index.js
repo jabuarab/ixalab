@@ -80,16 +80,8 @@ export default function Login() {
         console.log(total)
     }
 
-    function async aux () {
-        await connectWalletHandler();
-        setTimeout(async ()=>{
-        
-            context.setWeb3(web3_)
-            context.setAddress(address)
-            context.setVmContract(vmContract)
-            router.push('/company')
-
-        },9000)
+    const aux = async () =>{
+        await connectWalletHandler()       
     }
     
     const crear = async() =>{
@@ -122,8 +114,10 @@ export default function Login() {
 
                 onClick={() => {
                 aux()
-                aux()
-                
+                context.setWeb3(web3_)
+        context.setAddress(address)
+        context.setVmContract(vmContract)
+        router.push('/company')
     }}> Iniciar Sesión
                 </button>
                 <button onClick={() => {aux()}}> Wallet</button>

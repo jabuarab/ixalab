@@ -3,10 +3,15 @@ import AppContext from "../../context";
 import style from "./ProductTarget.module.css";
 import { useRef } from "react";
 import { faL } from "@fortawesome/free-solid-svg-icons";
+import { useRouter } from 'next/router'
+
 
 function ProductTarget ({widhtContainer,parcela,content}) {
     const context= useContext(AppContext);
     const toId = useRef();
+
+
+  const { pathname } = useRouter()
 
     console.log('widhtContainer');
     console.log(content);
@@ -23,7 +28,7 @@ function ProductTarget ({widhtContainer,parcela,content}) {
         return(<div className="App">Loading...</div>)
     }
     else {
-        if(content == '/client'){
+        if(pathname == '/client'){
             return(
                 <div className={`${style.ProductTarget}`} style={{width: widhtContainer+"%!important;"}}>
                     <h5 className={`${style.hmargin}`}>${parcela.latitud+parcela.longitud}</h5>
