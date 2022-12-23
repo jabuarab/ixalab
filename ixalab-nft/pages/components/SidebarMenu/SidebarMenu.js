@@ -54,7 +54,7 @@ const SidebarMenu = ({menuList,parcelaId,totalTokens,contract,address}) => {
           </div>
           <div>
             {menuList.map((Menu, index) => (
-              <button className={style.buttonLogin}
+              <div className={style.buttonLogin}
                 onClick={() => {
                   router.push(`${Menu.src}` )
                 //
@@ -68,7 +68,7 @@ const SidebarMenu = ({menuList,parcelaId,totalTokens,contract,address}) => {
                     {Menu.title}
                   </span>
                 </div>
-                </button>
+                </div>
               
       
             ))}
