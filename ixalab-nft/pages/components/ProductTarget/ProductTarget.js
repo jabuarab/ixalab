@@ -13,17 +13,15 @@ function ProductTarget ({widhtContainer,parcela,content}) {
 
   const { pathname } = useRouter()
 
-    console.log('widhtContainer');
-    console.log(content);
-    console.log(widhtContainer);
+
     const transferir = async (parcela) =>{
         console.log(context.address);
-       
+        console.log(parcela)
         console.log(toId.current.value)
         let id=parcela.id;
-        await context.vmContract.methods.safeTransferFrom(context.address,toId.current.value,2).send({from:context.address});
+        await context.vmContract.methods.safeTransferFrom(context.address,toId.current.value,id).send({from:context.address});
     }
-    let variable=false;
+    let variable=true;
     if(!parcela || !context.vmContract){
         return(<div className="App">Loading...</div>)
     }
@@ -31,10 +29,10 @@ function ProductTarget ({widhtContainer,parcela,content}) {
         if(pathname == '/client'){
             return(
                 <div className={`${style.ProductTarget}`} style={{width: widhtContainer+"%!important;"}}>
-                    <h5 className={`${style.hmargin}`}>${parcela.latitud+parcela.longitud}</h5>
+                    <h5 className={`${style.hmargin}`}>{parcela.id}</h5>
                     <div className={`${style.flexRowContainer}`}><p className={`${style.pmargin}`}>Plantas nuevas en la ultima semana:</p><p className={`${style.pmarginNone}`}> 120</p></div>
                     <div className={`${style.flexRowContainer}`}><p className={`${style.pmargin}`}>Cantidad total de Co2 Recuperado:</p><p className={`${style.pmarginNone}`}> 30T</p></div>
-                    <div className={`${style.flexRowContainer}`}><p className={`${style.pmargin}`}>Coordenadas:</p><p className={`${style.pmarginNone}`}> 2111412:43232</p></div>
+                    <div className={`${style.flexRowContainer}`}><p className={`${style.pmargin}`}>Coordenadas:</p><p className={`${style.pmarginNone}`}> {parcela.coord.latitud}:{parcela.coord.longitud}</p></div>
                     <div className={`${style.flexRowContainer} ${style.pmargin}`}><p className={`${style.pmargin}`}>Ultima vez:</p><p className={`${style.pmarginNone}`}> Ayer</p></div>
                     <div className={`${style.flexRowContainer}`}></div>
                 </div>
@@ -43,17 +41,17 @@ function ProductTarget ({widhtContainer,parcela,content}) {
         }else{
             return(
                 <div className={`${style.ProductTarget}`} style={{width: widhtContainer+"%!important;"}}>
-                    <h5 className={`${style.hmargin}`}>${parcela.latitud+parcela.longitud}</h5>
+                    <h5 className={`${style.hmargin}`}>{parcela.id}</h5>
                     <div className={`${style.flexRowContainer}`}><p className={`${style.pmargin}`}>Plantas nuevas en la ultima semana:</p><p className={`${style.pmarginNone}`}> 120</p></div>
                     <div className={`${style.flexRowContainer}`}><p className={`${style.pmargin}`}>Cantidad total de Co2 Recuperado:</p><p className={`${style.pmarginNone}`}> 30T</p></div>
-                    <div className={`${style.flexRowContainer}`}><p className={`${style.pmargin}`}>Coordenadas:</p><p className={`${style.pmarginNone}`}> 2111412:43232</p></div>
+                    <div className={`${style.flexRowContainer}`}><p className={`${style.pmargin}`}>Coordenadas:</p><p className={`${style.pmarginNone}`}> {parcela.coord.latitud}:{parcela.coord.longitud}</p></div>
                     <div className={`${style.flexRowContainer} ${style.pmargin}`}><p className={`${style.pmargin}`}>Ultima vez:</p><p className={`${style.pmarginNone}`}> Ayer</p></div>
                     <div className={`${style.flexRowContainer}`}>
                     
-                    <button onClick={variable = true}>Mostrar</button></div>
+                    <button onClick={() => variable = true}>Transfer</button></div>
                     {variable && <div className={`${style.flexRowContainer}`}>
                     <input  className={style.inputCreateParcela} type='string' ref={toId} placeholder="Indique la address para enviar"></input>
-                        <button onClick={()=> transferir(parcela)}> Transfer</button></div>}
+                        <button onClick={()=> transferir(parcela)}> Send</button></div>}
                 </div>
             )
         }
