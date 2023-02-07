@@ -8,6 +8,8 @@ import Modal from "../Modal/Modal";
 import { FcViewDetails, FcComboChart, FcVoicePresentation  } from 'react-icons/fc';
 import { useState } from "react";
 import AppContext from "../../context";
+import InfoTarget from "../InfoTarget/InfoTarget";
+
 
 
 
@@ -102,16 +104,24 @@ function SidebarScreen({isOpen, content, parcelaId,contract1,address1}) {
                 <Modal parcelas={totalTokens} content={content}/>
 
                 <div className={style.flexRowContainerCompany}>
-                    <div>
+                    <div className={`${style.w_100} ${style.floatContainer}`}>
                         <h1>DASHBOARD</h1>
                         <p>Informacion sobre impacto y metricas de implementacion</p>
-                    </div>
-                    <div>
-                        <input type="datetime" value={'16/12/22'}></input>
+                        <select className={style.rigthDateTime}>
+                            <option value={'all'}>General</option>
+                            <option value={'SH'}>German Abu Arab</option>
+                            <option value={'NC'}>Ignacio Cogliatti</option>
+                        </select>
                     </div>
                 </div>
-                <div className={style.flexRowContainerCompany}>
+                <div className={`${style.flexRowContainerCompany} ${style.floatContainer}`}>
                     <CompanyGrafic totalTokens={totalTokens} />
+                </div>
+                <div className={`${style.flexRowContainerCompany} ${style.w99}`}>
+                    <InfoTarget isOpen={isOpen} mar={true} text={'Tokens totales'} val={totalTokens.length} moreView={'f'}/>
+                    <InfoTarget isOpen={isOpen} mar={false} text={'Co2'} val={'150T'} moreView={'f'}/>
+                    <InfoTarget isOpen={isOpen} mar={false} text={'Plantas nuevas'} val={'45'} moreView={'f'}/>
+                    <InfoTarget isOpen={isOpen} mar={false} text={'+'} val={'Ver todos'} moreView={'t'}/>
                 </div>
             </div>
         )
