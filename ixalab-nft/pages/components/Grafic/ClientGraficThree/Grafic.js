@@ -27,10 +27,10 @@ export const options = {
   responsive: true,
   plugins: {
     legend: {
-      position: 'right',
+      display: false,
     },
     title: {
-      display: true,
+      display: false,
       text: 'Cantidad de parcelas compradas',
     },
   },

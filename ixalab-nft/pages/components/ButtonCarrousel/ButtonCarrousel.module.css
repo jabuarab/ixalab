@@ -1,15 +1,16 @@
 
 .flexRowContainer{
     display: flex;
-    width: 100%;
+    width: 97%;
     align-items: flex-start;
     justify-content: space-between;
     column-gap: 5px;
     margin-left: 2%;
+    margin-top: 1%;
 }
 
 .image{
-    height: 450px;
+    height: 410px;
     width: 900px;
 }
 

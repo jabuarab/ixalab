@@ -26,10 +26,10 @@ export const options = {
   responsive: true,
   plugins: {
     legend: {
-      position: 'top',
+      display: false,
     },
     title: {
-      display: true,
+      display: false,
       text: 'Plantas nuevas',
     },
   },

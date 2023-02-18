@@ -26,7 +26,8 @@ function ProductTarget ({widhtContainer,parcela,content}) {
         return(<div className="App">Loading...</div>)
     }
     else {
-        if(pathname == '/client'){
+        console.log(pathname);
+        if(pathname == '/client/[id]'){
             return(
                 <div className={`${style.ProductTarget}`} style={{width: widhtContainer+"%!important;"}}>
                     <h5 className={`${style.hmargin}`}>{parcela.id}</h5>

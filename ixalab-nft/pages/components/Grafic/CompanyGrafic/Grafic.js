@@ -6,16 +6,38 @@ import InfoTarget from "../../InfoTarget/InfoTarget";
 
 
 
-function Grafic({totalTokens}) {
-    return(
-        <div className={`${style.w100}`}>
-           <h2>Area geografica</h2>
-           <div className={`${style.flexRowContainerCompany}`}>
+function Grafic({ totalTokens }) {
+    return (
+        <div className={`${style.flexRowContainerCompany} ${style.w100} ${style.h400}`}>
+            <div className={`${style.w18} ${style.flexContainer}`}>
+                <h2 className={`${style.leftTitle}`}>Area geografica</h2>
+                <div className={`${style.sacleContainer}`}>
+                    <div className={`${style.flexRowContainerCompany}`}>
+                        <div className={`${style.flexRowContainerScale}`}>
+                            <div className={`${style.redSq}`}></div>
+                            <div className={`${style.fontSq}`}>0 - 10%</div>
+                        </div>
+                        <div className={`${style.flexRowContainerScale}`}>
+                            <div className={`${style.orangeSq}`}></div>
+                            <div className={`${style.fontSq}`}>11 - 30%</div>
+                        </div>
+                        <div className={`${style.flexRowContainerScale}`}>
+                            <div className={`${style.yellowSq}`}></div>
+                            <div className={`${style.fontSq}`}>31 - 80%</div>
+                        </div>
+                        <div className={`${style.flexRowContainerScale}`}>
+                            <div className={`${style.greenSq}`}></div>
+                            <div className={`${style.fontSq}`}>81 - 100%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className={`${style.flexRowContainerCompany} ${style.w80}`}>
                 <div className={`${style.graficContainer}`}>
                     <div className={`${style.graficContainerRowCenter}`}>
-                    {totalTokens.map((Token, index) => (
-                        <Hexagon color={'#00AB30'} />
-                    ))}
+                        {totalTokens.map((Token, index) => (
+                            <Hexagon color={'green'} />
+                        ))}
                         {/* <Hexagon color={'#00AB30'} />
                         <Hexagon color={'#00AB30'} />
                         <Hexagon color={'#ffffff'} />
@@ -105,31 +127,7 @@ function Grafic({totalTokens}) {
                         <Hexagon color={'red'} />
                     </div> */}
                 </div>
-                <div className={`${style.sacleContainer}`}>
-                    <div className={`${style.flexRowContainerCompany}`}>
-                        <div className={`${style.flexRowContainerScale}`}>
-                            <div className={`${style.redSq}`}></div>
-                            <div>0 - 10%</div>
-                        </div>
-                        <div className={`${style.flexRowContainerScale}`}>
-                            <div className={`${style.orangeSq}`}></div>
-                            <div>0 - 10%</div>
-                        </div>
-                        <div className={`${style.flexRowContainerScale}`}>
-                            <div className={`${style.yellowSq}`}></div>
-                            <div>0 - 10%</div>
-                        </div>
-                        <div className={`${style.flexRowContainerScale}`}>
-                            <div className={`${style.greenSq}`}></div>
-                            <div>0 - 10%</div>
-                        </div>
-                    </div>
-                </div>
-                <InfoTarget text={'Tokens totales'} val={totalTokens.length}/>
-                <InfoTarget text={'Co2'} val={'150T'}/>
-                <InfoTarget text={'Plantas nuevas'} val={'45'}/>
-                <InfoTarget text={'Fotos'} val={''}/>
-           </div>
+            </div>
         </div>
     )
 }
