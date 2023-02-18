@@ -23,38 +23,43 @@ function Dashboard() {
     const cantidadCo2Graphic = useRef();
 
     function selectGraficFilter(num) {
-        totalAreaCubierta.current.style.backgroundColor = 'white';
+        totalAreaCubierta.current.style.backgroundColor = '#3bbbb9';
         totalAreaCubiertaGraphic.current.style.display = 'none';
+        totalAreaCubierta.current.style.border = '0px solid white';
 
-        cantidadParcelas.current.style.backgroundColor = 'white';
+        cantidadParcelas.current.style.backgroundColor = '#5a7bb8';
         cantidadParcelasGraphic.current.style.display = 'none';
+        cantidadParcelas.current.style.border = '0px solid white';
 
-        cantidadPlantas.current.style.backgroundColor = 'white';
+        cantidadPlantas.current.style.backgroundColor = 'rgba(98, 11, 209, 0.72)';
         cantidadCo2Graphic.current.style.display = 'none';
+        cantidadPlantas.current.style.border = '0px solid white';
 
-        cantidadCo2.current.style.backgroundColor = 'white';
+        cantidadCo2.current.style.backgroundColor = 'rgba(163, 54, 134, 0.54)';
         cantidadPlantasGraphic.current.style.display = 'none';
+        cantidadCo2.current.style.border = '0px solid white';
 
-        fotos.current.style.backgroundColor = 'white';
+        fotos.current.style.backgroundColor = '#79e6b1';
         imagenesContainer.current.style.display = 'none';
+        fotos.current.style.border = '0px solid white';
 
         if(num == 1){
-            totalAreaCubierta.current.style.backgroundColor = '#919ab685';
+            totalAreaCubierta.current.style.border = '5px solid black';
             totalAreaCubiertaGraphic.current.style.display = 'flex';
         }else if(num == 2){
-            cantidadParcelas.current.style.backgroundColor = '#7887b385';
+            cantidadParcelas.current.style.border = '5px solid black';
             cantidadParcelasGraphic.current.style.display = 'flex';
         }
         else if(num == 3){
-            cantidadPlantas.current.style.backgroundColor = '#4762b485';
+            cantidadPlantas.current.style.border = '5px solid black';
             cantidadPlantasGraphic.current.style.display = 'flex';
         }
         else if(num == 4){
-            cantidadCo2.current.style.backgroundColor = '#0d35af85';
+            cantidadCo2.current.style.border = '5px solid black';
             cantidadCo2Graphic.current.style.display = 'flex';
         }
         else if(num == 5){
-            fotos.current.style.backgroundColor = '#c9cacd85';
+            fotos.current.style.border = '5px solid black';
             imagenesContainer.current.style.display = 'flex';
         }
     }
@@ -62,11 +67,11 @@ function Dashboard() {
     return(
         <div className={style.flexRowContainer}>
             <div className={`${style.table}`}>
-                <div ref={fotos} onClick={() => selectGraficFilter(5)} className={`${style.tableRow}`}><p>Fotos</p><p> <AiFillPicture/> </p></div>
-                <div ref={totalAreaCubierta} onClick={() => selectGraficFilter(1)} className={`${style.tableRow}`}><p>Totalidad del area cubierta:</p><p> 45%</p></div>
-                <div ref={cantidadParcelas} onClick={() => selectGraficFilter(2)} className={`${style.tableRow}`}><p>Cantidad de parcelas compradas (tokens):</p><p> 8</p></div>
-                <div ref={cantidadPlantas} onClick={() => selectGraficFilter(3)} className={`${style.tableRow}`}><p>Plantas nuevas en la ultima semana:</p><p> 120</p></div>
-                <div ref={cantidadCo2} onClick={() => selectGraficFilter(4)} className={`${style.tableRow}`} style={{backgroundColor: "#0d35af85"}}><p>Cantidad total de Co2 Recuperado:</p><p> 30T</p></div>
+                <div ref={fotos} onClick={() => selectGraficFilter(5)} className={`${style.tableRow}`} style={{backgroundColor: "#79e6b1"}}><p>Fotos</p><p> <AiFillPicture/> </p></div>
+                <div ref={totalAreaCubierta} onClick={() => selectGraficFilter(1)} className={`${style.tableRow}`} style={{backgroundColor: "#3bbbb9"}}><p>Totalidad del area cubierta:</p><p> 45%</p></div>
+                <div ref={cantidadParcelas} onClick={() => selectGraficFilter(2)} className={`${style.tableRow}`} style={{backgroundColor: "#5a7bb8"}}><p>Cantidad de parcelas compradas (tokens):</p><p> 8</p></div>
+                <div ref={cantidadPlantas} onClick={() => selectGraficFilter(3)} className={`${style.tableRow}`} style={{backgroundColor: "rgba(98, 11, 209, 0.72)"}}><p>Plantas nuevas en la ultima semana:</p><p> 120</p></div>
+                <div ref={cantidadCo2} onClick={() => selectGraficFilter(4)} className={`${style.tableRow}`} style={{backgroundColor: "rgba(163, 54, 134, 0.54)", border: "5px solid black"}}><p>Cantidad total de Co2 Recuperado:</p><p> 30T</p></div>
             </div>
             <div ref={cantidadCo2Graphic} className={`${style.grarficUp}`}>
                 <ClientGrafic />

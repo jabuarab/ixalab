@@ -8,7 +8,7 @@ import InfoTarget from "../../InfoTarget/InfoTarget";
 
 function Grafic({ totalTokens }) {
     return (
-        <div className={`${style.flexRowContainerCompany} ${style.w100}`}>
+        <div className={`${style.flexRowContainerCompany} ${style.w100} ${style.h400}`}>
             <div className={`${style.w18} ${style.flexContainer}`}>
                 <h2 className={`${style.leftTitle}`}>Area geografica</h2>
                 <div className={`${style.sacleContainer}`}>
@@ -36,7 +36,7 @@ function Grafic({ totalTokens }) {
                 <div className={`${style.graficContainer}`}>
                     <div className={`${style.graficContainerRowCenter}`}>
                         {totalTokens.map((Token, index) => (
-                            <Hexagon color={'#00AB30'} />
+                            <Hexagon color={'green'} />
                         ))}
                         {/* <Hexagon color={'#00AB30'} />
                         <Hexagon color={'#00AB30'} />

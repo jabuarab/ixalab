@@ -55,7 +55,7 @@ const SidebarMenu = ({ menuList, parcelaId, totalTokens, contract, address }) =>
               {menuList.map((Menu, index) => (
                 <div className={style.buttonLogin}
                   onClick={() => {
-                    router.push(`${Menu.src}`)
+                    router.push(`${Menu.src}`);
                     //
 
                   }}>

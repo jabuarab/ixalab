@@ -36,7 +36,6 @@ function Modal(parcelas, { content, specialHeight }) {
                             <div onClick={() => showHideModal(1)} className={`${style.filterButton} ${style.filterButtonSelected}`} style={{ top: '20%' }}>Fecha</div>
                             <div onClick={() => showHideModal(1)} className={style.filterButton} style={{ top: '23%' }}>Co2 Producido</div>
                             <input className={`${style.filterButton} ${style.filterInput}`} placeholder="Buscar por ID" style={{ top: '26%' }}></input>
-                            <input className={`${style.filterButton} ${style.filterInput}`} placeholder="Buscar usuario" style={{ top: '26%' }}></input>
                         </div>
 
 

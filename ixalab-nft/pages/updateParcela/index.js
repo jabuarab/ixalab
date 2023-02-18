@@ -10,11 +10,12 @@ function cargarParcela() {
     const context = useContext(AppContext)
 
     var menusCliente = [
-        { title: "Menu", src: "/parcelas/1", icon: FcViewDetails},
-        { title: "Dashboard", src: "/client/1", icon: FcComboChart },
-        { title: "Descargar reporte", src: "/transferParcela", icon: FcDownload },
-        { title: "Crear parcela", src: "/cargarParcela", icon: FcAddRow },
-        { title: "Descargar reporte", src: "/updateParcela", icon: FcDownload },
+        { title: "Menu", src: "parcelas/1", icon: FcViewDetails},
+        { title: "Dashboard", src: "client/1", icon: FcComboChart },
+        { title: "Descargar reporte", src: "transferParcela", icon: FcDownload },
+        { title: "Crear parcela", src: "cargarParcela", icon: FcAddRow },
+        { title: "Actualizar parcela", src: "transferParcela", icon: FcAddRow },
+        { title: "Actualizar parcela", src: "transferParcela", icon: FcAddRow },
 
       ];
    

@@ -14,6 +14,7 @@ function cargarParcela() {
         { title: "Dashboard", src: "/client/1", icon: FcComboChart },
         { title: "Descargar reporte", src: "/transferParcela", icon: FcDownload },
         { title: "Crear parcela", src: "/cargarParcela", icon: FcAddRow },
+        { title: "Actualizar parcela", src: "/transferParcela", icon: FcAddRow },
         { title: "Descargar reporte", src: "/updateParcela", icon: FcDownload },
 
       ];

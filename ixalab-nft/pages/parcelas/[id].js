@@ -15,9 +15,11 @@ function Client() {
 
     
     var menusCliente = [
-        { title: "Menu", src: "/", icon: FcViewDetails},
-        { title: "Dashboard", src: "client", icon: FcComboChart },
-          { title: "Descargar reporte", src: "descarga", icon: FcDownload },
+        { title: "Menu", src: "/parcelas/4", icon: FcViewDetails},
+        { title: "Dashboard", src: "/client/4", icon: FcComboChart },
+          { title: "Descargar reporte", src: "/transferParcela", icon: FcDownload },
+          { title: "Descargar reporte", src: "/updateParcela", icon: FcDownload },
+
       ];
 
     return(

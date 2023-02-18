@@ -1,6 +1,7 @@
 .loginContainer{
     width: 500px;
     height: 500px;
+    background-color: #66a379;
     box-shadow: 2px 2px 64px 2px rgba(0, 0, 0, 0.2);
     display: flex;
     justify-content: center;
@@ -11,10 +12,10 @@
 }
 
 .loginBack{
-    height: 97vH;
-    width: 99vW;
+    height: 102vH;
+    width: 102vW;
     margin: 0px;
-    background-color: white;
+    background: linear-gradient(226deg, #bdbdbd 10%, #4e4e8c 60%, #6060c3 100%);
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -40,9 +41,9 @@
     width: 50%;
     height: 10%;
     border-radius: 5px;
-    border: solid 1px white;
-    background: #12121e;
-    color: white;
+    border: solid 1px black;
+    background: #6060c3;
+    color: black;
     cursor: pointer;
     transition: 0.5s;
 }
