@@ -20,7 +20,7 @@ function Modal(parcelas, {content}) {
         return(<div className="App">Loading...</div>)
     }
     else{
-    
+    console.log(parcelas)
     const parcela1= parcelas.parcelas[0];
    
 

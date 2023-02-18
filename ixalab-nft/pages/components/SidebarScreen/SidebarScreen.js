@@ -15,7 +15,7 @@ import AppContext from "../../context";
 function SidebarScreen({isOpen, content, parcelaId,contract1,address1}) {
 
     const [totalTokens,setTokens] = useState("")
-
+    const [clientTokens,setClientTokens] = useState("")
     const context = useContext(AppContext)
     const longitud = useRef();
     const latitud = useRef();
@@ -41,17 +41,24 @@ function SidebarScreen({isOpen, content, parcelaId,contract1,address1}) {
     }
 
     
-    const clientTokens = async () =>{
-        const parcelas= [] 
-        let clientAddress = ""
+    const clientAllTokens = async () =>{
+        const parcelas1= [] 
         let max= await context.vmContract.methods.tokenCounter().call()
-        
+        let parse = undefined;
         for (let i=0; i<max; i++){
             let address_temp= await context.vmContract.methods.ownerOf(i).call()
-            let parse= await context.vmContract.methods.tokenIdToParcelasIndex(i).call()    
-            parcelas.push(parse)
+            if (address_temp == context.address){
+                let parse= await context.vmContract.methods.tokenIdToParcelasIndex(i).call()   
+                let parsel={"id":i,
+                    "coord":parse}
+
+                parcelas1.push(parsel)
+
+                }
+            
         }
-        setTokens(parcelas)
+        console.log(parcelas1)
+        setClientTokens(parcelas1)
     }
 
 
@@ -60,20 +67,21 @@ function SidebarScreen({isOpen, content, parcelaId,contract1,address1}) {
         thisParcelaId = parcelaId;
     }
     allTokens()
-    // clientTokens()
+    clientAllTokens()
 
    
     
-    if (!context.vmContract || !totalTokens)
+    if (!context.vmContract || !totalTokens || !clientTokens  )
     {
       return(<div className="App">Loading...</div>)
       }
     else{
     
     if(content=='/client'){
+        console.log(clientTokens)
         return(
             <div className={`${isOpen && style.sidebarScreenContainerMax} ${style.sidebarScreenContainer}`}>
-                <Modal parcelas = {totalTokens} content={content} />
+                <Modal parcelas = {clientTokens} content={content} />
                 <h1>DASHBOARD</h1>
                 <div className={style.flexRowContainer}>
                     <Dashboard />
