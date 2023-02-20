@@ -1,11 +1,15 @@
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  width: 100vW;
+  height: 100vH;
+  font-family: sans-serif;
 }
 
 code {
-  white-space: pre-wrap; 
-  word-break: break-all; 
+  white-space: pre-wrap;
+  word-break: break-all;
 }
 
 p code {
@@ -15,6 +19,7 @@ p code {
 
 #__next {
   height: 100%;
+  margin: 0;
 }
 
 #nav-mobile {

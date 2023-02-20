@@ -1,0 +1,30 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+model parcela {
+  id        String     @default(cuid()) @id
+  latitud     Int
+  longitud    Int
+  m2        Int
+  m2used    Int
+  m3        Int
+  published Boolean @default(false)
+}
+
+model User {
+  id            String       @default(cuid()) @id
+  name          String?
+  email         String?   @unique
+  address       String?   @unique
+  creator       Boolean @default(false)  
+  @@map(name: "users")
+  @@index([address])
+}
